@@ -1,13 +1,13 @@
 <template>
   <div v-if="data">
-    <table class="container">
+    <table class="container" border="1">
       <tr>
         <td rowspan="5" class="photo">
           <img :src="image" class="image" />
         </td>
         <td>Name</td>
         <td v-if="data.name">{{ data.name }}</td>
-        <td v-else class="no">No Name</td>
+        <td class="no" v-else>No Name</td>
       </tr>
       <tr>
         <td>username</td>
@@ -20,24 +20,25 @@
       <tr>
         <td>Company</td>
         <td v-if="data.company">{{ data.company }}</td>
-        <td v-else class="no">No Company</td>
+        <td class="no" v-else>No Company</td>
       </tr>
       <tr>
         <td>Repositories</td>
         <td>{{ data.public_repos }}</td>
       </tr>
       <tr>
-        <td rowspan="2" class="photo bio">{{ data.bio }}</td>
+        <td rowspan="2" class="photo bio" v-if="data.bio">{{ data.bio }}</td>
+        <td rowspan="2" class="no bio" v-else>No Bio</td>
         <td>Location</td>
         <td v-if="data.location">{{ data.location }}</td>
-        <td v-else class="no">No Location</td>
+        <td class="no" v-else>No Location</td>
       </tr>
       <tr>
         <td>Website</td>
         <td v-if="data.blog">
-          <a :href="data.blog">{{ data.blog }}</a>
+          <a :href="data.blog" target="_blank">{{ data.blog }}</a>
         </td>
-        <td v-else class="no">No Blog</td>
+        <td class="no" v-else>No Website</td>
       </tr>
     </table>
     <a :href="moreAPI" target="_blank">
