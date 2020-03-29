@@ -1,7 +1,7 @@
 <template >
-  <form @submit.prevent="onSubmit" class="form">
+  <form @submit.prevent="onSubmit">
     <input type="text" v-model="username" placeholder="Enter a github username here" />
-    <button type="sumbit">Go!</button>
+    <button type="sumbit">SUBMIT</button>
   </form>
 </template>
 

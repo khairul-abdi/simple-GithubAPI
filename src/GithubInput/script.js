@@ -1,5 +1,4 @@
 import bus from '../bus'
-import css from './style.css'
 
 export default {
   name: 'GithubInput',

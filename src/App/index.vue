@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <github-input></github-input>
     <github-output></github-output>
   </div>
