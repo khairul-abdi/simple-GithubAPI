@@ -1,4 +1,4 @@
-# [simple Github API](https://uybxh.csb.app/)
+# [Simple Github API](https://uybxh.csb.app/)
 
 ## Requirements
 
